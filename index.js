@@ -14,7 +14,7 @@ function changeDisplay(event) {
       return;
     } else {
       calculate();
-      expression = '';
+      expression = '0';
       return;
     }
   }
