@@ -14,7 +14,6 @@ function changeDisplay(event) {
       return;
     } else {
       calculate();
-      expression = '0';
       return;
     }
   }
@@ -52,5 +51,6 @@ function calculate() {
   let processedExpression = expression.replace('%','/100');
   let result = eval(processedExpression);
   expression = Number(result.toFixed(6));
+  expression = JSON.stringify(expression);
   document.querySelector('.js-display').innerText = expression;
 }
