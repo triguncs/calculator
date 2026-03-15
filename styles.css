@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: rgb(92, 92, 92);
+  background-color: #e6d8a4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,15 +15,16 @@ body {
 }
 
 .container {
-  background-color: rgb(57, 57, 57);
+  background-color: #71503A;
   padding: 30px;
   width: 250px;
   border-radius: 20px;
+  box-shadow: 5px 5px 10px #472A28;
 }
 
 .css-display {
   margin-bottom: 20px;
-  background-color: rgb(105, 105, 105);
+  background-color: #A3795B;
   padding: 10px;
   border-radius: 10px;
   color: white;
@@ -38,14 +39,15 @@ button {
   border-radius: 16px;
   border: none;
   cursor: pointer;
-  border: 1.5px solid;
   height: 55px;
   width: 55px;
   transition: 0.1s;
+  box-shadow: 2px 2px 10px #472A28;
 }
 
 button:hover {
   transform: scale(1.1);
+  filter: brightness(1.1);
 }
 
 button:active {
@@ -61,4 +63,19 @@ button:active {
 .zero-key {
   grid-column: span 2;
   width: 100%;
+}
+
+.number-key {
+  background: #A3795B;
+  color: white;
+}
+
+.operation-key {
+  background: #552d21;
+  color: white;
+}
+
+.other-key {
+  background: #472A28;
+  color: white;
 }
