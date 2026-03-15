@@ -1,4 +1,4 @@
-let expression = '';
+let expression = '0';
 
 const buttonsContainer = document.querySelector(".js-buttons");
 
@@ -19,16 +19,29 @@ function changeDisplay(event) {
     }
   }
 
-  if (value === 'C') {
-    expression = '';
+  if (value === 'AC') {
+    expression = '0';
     document.querySelector('.js-display').innerText = expression;
     return;
   }
 
   if (value === 'DEL') {
+    if (expression === '0') {
+      return;
+    }
+
     expression = expression.slice(0, -1);
+
+    if (expression === '') {
+      expression = '0';
+    }
+
     document.querySelector('.js-display').innerText = expression;
     return;
+  }
+
+  if (expression === '0' && value !== '+' && value !== '-' && value !== '*' && value !== '/') {
+    expression = '';
   }
 
   expression += value;
