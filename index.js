@@ -25,6 +25,12 @@ function changeDisplay(event) {
     return;
   }
 
+  if (value === 'DEL') {
+    expression = expression.slice(0, -1);
+    document.querySelector('.js-display').innerText = expression;
+    return;
+  }
+
   expression += value;
   document.querySelector('.js-display').innerText = expression;
 }
